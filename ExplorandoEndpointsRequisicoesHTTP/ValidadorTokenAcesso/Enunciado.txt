@@ -1,0 +1,23 @@
+Descrição
+Na consultoria onde você atua, foi necessário criar uma camada de autenticação simples para simular uma API que apenas aceita requisições autenticadas. Sua missão é escrever um programa que valide um token de acesso.
+
+Entrada
+O programa deve receber uma string representando o token de acesso.
+
+O token deve ter exatamente 10 caracteres
+Deve começar com a letra "A" maiúscula
+Deve conter pelo menos um dígito numérico
+Saída
+O programa deverá validar o token e exibir:
+
+Acesso permitido caso o token seja válido
+Acesso negado caso não seja
+Exemplos
+A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+Entrada	Saída
+A123456789	Acesso permitido
+B123456789	Acesso negado
+A12345	Acesso negado
+Aabcdefghi	Acesso negado
+Atenção: É extremamente importante que as entradas e saídas sejam exatamente iguais às descrições do desafio de código.
