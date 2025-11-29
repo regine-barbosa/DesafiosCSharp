@@ -1,0 +1,19 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Lê a entrada do usuário
+        string entrada = Console.ReadLine();
+        
+        // TODO: Divida a entrada em partes
+        string[] entradaEmPartes = entrada.Split(" ");
+
+        // TODO: Implemente o primeiro elemento, que é o número de dias (interações)
+       string numeroInteracoes = entradaEmPartes[0];
+
+        // TODO: Retorne a saída, ela deve ser a quantidade de interações seguida da palavra "interacoes"
+        Console.WriteLine($"{numeroInteracoes} interacoes");
+    }
+}
