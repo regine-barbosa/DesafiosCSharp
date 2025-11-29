@@ -1,0 +1,38 @@
+using System;
+using System.Linq;
+
+class Program
+{
+    static void Main()
+    {
+        // Solicita ao usuário que insira o token de acesso
+        string token = Console.ReadLine();
+
+        bool tokenValido = false;
+        // TODO: Verifique se o token tem exatamente 10 caracteres
+        if(token.Length == 10)
+        {
+        // TODO: Verifica se o primeiro caractere é a letra 'A' maiúscula          
+          if(token[0] == 'A')
+          {
+        // TODO: Verifica se há pelo menos um dígito numérico no token          
+            if(token.Any(char.IsDigit))
+            {
+              tokenValido = true;
+            }
+          }
+        }
+        // TODO: Verifique se todas as condições foram satisfeitas
+            // TODO: Token válido
+            if (tokenValido)
+            {
+              Console.WriteLine("Acesso permitido");
+            }
+            else
+            {
+            
+            // Token inválido
+            Console.WriteLine("Acesso negado");
+        }
+    }
+}
