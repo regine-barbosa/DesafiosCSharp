@@ -1,0 +1,25 @@
+Descrição
+Você trabalha em uma consultoria que está iniciando um projeto para simular uma API interna sem uso de frameworks. Sua tarefa é criar um sistema simples que receba um "endpoint" e retorne a ação correspondente, como se estivesse roteando a requisição para a função correta.
+
+Entrada
+A entrada deverá receber uma string representando o endpoint da requisição:
+
+/clientes
+/produtos
+/relatorios
+Saída
+O programa deverá retornar uma mensagem correspondente ao endpoint:
+
+Se for /clientes, retornar: Listando clientes...
+Se for /produtos, retornar: Exibindo produtos disponiveis...
+Se for /relatorios, retornar: Gerando relatorio de desempenho...
+Caso o endpoint informado não corresponda aos definidos acima, retorne: Endpoint nao reconhecido.
+Exemplos
+A tabela abaixo apresenta exemplos com alguns dados de entrada e suas respectivas saídas esperadas. Certifique-se de testar seu programa com esses exemplos e com outros casos possíveis.
+
+Entrada	Saída
+/clientes	Listando clientes...
+/produtos	Exibindo produtos disponiveis...
+/relatorios	Gerando relatorio de desempenho...
+Atenção: É extremamente importante que as entradas e saídas sejam exatamente iguais às descrições do desafio de código.
+
