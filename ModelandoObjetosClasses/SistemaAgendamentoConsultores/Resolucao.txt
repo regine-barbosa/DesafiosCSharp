@@ -1,0 +1,89 @@
+using System;
+using System.Globalization;
+
+
+// Classe que representa um consultor
+class Consultor
+{
+    public string Nome { get; set; }
+    public Agendamento Agendamento { get; set; }
+
+
+    public void ExibirInformacoes()
+    {
+        Console.WriteLine($"{Nome}:");
+
+
+        if (Agendamento == null)
+        {
+            Console.WriteLine("Nenhum agendamento cadastrado");
+        }
+        else
+        {
+            Agendamento.Exibir();
+        }
+    }
+}
+
+
+// TODO: Crie a Classe que representa um agendamento
+class Agendamento
+{
+    //TODO: Nome do cliente
+    public string NomeCliente { get; set; }
+    //TODO: Data do agendamento
+    public DateTime Data { get; set; }
+    //TODO: Descrição do serviço
+    public string Descricao { get; set; }
+
+
+    // TODO: Implemente o método para exibir os dados formatados
+    public void Exibir()
+    {
+        // TODO: Exiba no formato: "dd/MM/yyyy - Cliente: Descricao"
+        Console.WriteLine($"{Data.ToString("dd/MM/yyyy")} - {NomeCliente}: {Descricao}");
+    }
+}
+
+
+class Program
+{
+    static void Main()
+    {
+        string linhaConsultor = Console.ReadLine();
+        string nomeConsultor = linhaConsultor.Replace("Consultor:", "").Trim();
+
+
+        Console.ReadLine(); // Lê a linha "Agendamentos:" e a ignora
+
+
+        string linhaAgendamento = Console.ReadLine();
+
+
+        var consultor = new Consultor { Nome = nomeConsultor };
+
+
+        if (!string.IsNullOrWhiteSpace(linhaAgendamento))
+        {
+            string[] partes = linhaAgendamento.Split(',');
+
+
+            // Verifica se a lista de partes tem o tamanho esperado (3) antes de tentar acessar os índices
+            if (partes.Length >= 3)
+            {
+                var agendamento = new Agendamento
+                {
+                    NomeCliente = partes[0].Trim(),
+                    Data = DateTime.ParseExact(partes[1].Trim(), "dd/MM/yyyy", CultureInfo.InvariantCulture),
+                    Descricao = partes[2].Trim()
+                };
+
+
+                consultor.Agendamento = agendamento;
+            }
+        }
+
+
+        consultor.ExibirInformacoes();
+    }
+}
